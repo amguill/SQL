@@ -1,0 +1,32 @@
+- CREATE A GROCERY STORE DATABASE 
+
+CREATE TABLE grocery_store (id INTEGER PRIMARY KEY, name TEXT, aisle INTEGER, price INTEGER);
+
+INSERT INTO grocery_store VALUES (1, "white peaches", 1, 1.25);
+INSERT INTO grocery_store VALUES (2, "watermelon slices", 1, 4.87);
+INSERT INTO grocery_store VALUES (3, "black plums", 1, .74);
+INSERT INTO grocery_store VALUES (4, "air chilled chicken thighs", 2, 5.75);
+INSERT INTO grocery_store VALUES (5, "spicy italian sausage", 2, 4.13);
+INSERT INTO grocery_store VALUES (6, "sea salt tortilla chips", 4, 3.07);
+INSERT INTO grocery_store VALUES (7, "oat milk", 10, 3.48);
+INSERT INTO grocery_store VALUES (8, "sport sunscreen", 8, 5.15);
+INSERT INTO grocery_store VALUES (9, "cherry turnovers", 3, 3.07);
+INSERT INTO grocery_store VALUES (10, "cherry pie", 3, 14.40);
+INSERT INTO grocery_store VALUES (11, "jalapeno sausage kolache", 3, 2.66);
+INSERT INTO grocery_store VALUES (12, "sourdough bread", 3, 3.58);
+INSERT INTO grocery_store VALUES (13, "pasture raised large brown eggs", 10, 4.93);
+INSERT INTO grocery_store VALUES (14, "extra virgin olive oil", 4, 5.63);
+INSERT INTO grocery_store VALUES (15, "vanilla coconut almond creamer", 10, 3.79);
+
+
+- ordering grocery store inventory by aisle 
+SELECT * FROM grocery_store ORDER BY aisle asc 
+
+
+-items in the store that are less than 5 dollars
+SELECT * FROM grocery_store WHERE price < 5;
+
+
+-average price of items in aisle 10
+SELECT AVG(price) "average aisle 10 price" FROM grocery_store 
+
